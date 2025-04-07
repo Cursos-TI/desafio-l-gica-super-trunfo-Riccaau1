@@ -8,7 +8,7 @@
 int main() {
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
-    int carta1, carta2;
+    int carta1, carta2, escolhajogador;
     char codigo1[4], codigo2[4];
     unsigned long int populacao1, populacao2;
     char estado1[2], estado2[2];
@@ -145,6 +145,42 @@ int main() {
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+
+    printf("*** Menu Principal ***\n");
+    printf("Escolha um atributo abaixo para comparar as cartas: \n");
+    printf("1. Nome da cidade.\n");
+    printf("2. População.\n");
+    printf("3. Área.\n");
+    printf("4. PIB.\n");
+    printf("5. Número de pontos turísticos.\n");
+    printf("6. Densidade demográfica.\n");
+    scanf("%d", &escolhajogador);
+
+    switch (escolhajogador)
+    {
+    case 1:
+        printf("O nome das cidades são %s e %s", cidade1, cidade2);
+        break;
+    case 2:
+        printf("A população da cidade 1 é %u e da cidade 2 é %u", populacao1, populacao2);
+        break;
+    case 3:
+        printf("A área da cidade 1 é %f e da cidade 2 é %f", area1, area2);
+        break;
+    case 4:
+        printf("O PIB da cidade 1 é %f e da cidade 2 é %f", PIB1, PIB2);
+        break;
+    case 5:
+        printf("O número de pontos turísticos da cidade 1 é %u e da cidade 2 é %u", pontos_tur1, pontos_tur2);
+        break;
+    case 6:
+        printf("A densidade demográfica da cidade 1 é %f e da cidade 2 é %f", densidade_pop1, densidade_pop2);
+        break;
+    default:
+        printf("Opção inválida");
+        break;
+          
+        
 
     return 0;
 }
